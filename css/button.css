@@ -1,0 +1,154 @@
+.btn {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%);
+    z-index: 2;
+}
+
+.btn:hover {
+    color: rgb(245, 233, 127);
+    transition: color 0.2s ease-in;
+}
+
+.btn:active {
+    position: relative;
+    top: 1px;
+}
+
+.btn--nav {
+    padding: 13px 44px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 100px;
+}
+
+.nav__toggle {
+    display: none;
+}
+
+#footer_btn {
+    color: #FFFFFF;
+}
+
+.btn--header {
+    padding: 27px 48px;
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 27px;
+}
+
+.btn--destination {
+    padding: 25px 44px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 27px;
+}
+
+.slider__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%);
+}
+
+.slider__btn:active {
+    transform: calc(translateY(-50% -1px));
+}
+
+.slider__btn--prev {
+    left: -27px;
+    padding-left: 26px;
+    justify-content: flex-start;
+}
+
+.slider__btn--next {
+    right: -27px;
+    padding-right: 26px;
+    justify-content: flex-end;
+}
+
+.btn--cta {
+    padding: 25px 54px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 27px;
+}
+
+.btn--subscribe {
+    padding: 34px 86px;
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 35px;
+}
+
+/* Adaptive */
+/* Burger menu */
+
+.btn--menu-wrapper {
+    --time: 0.1s;
+    --width: 40px;
+    --height: 30px;
+    --line-height: 4px;
+    --color: #fff;
+
+    width: var(--width);
+    height: var(--height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn--mobile {
+    position: relative;
+    width: var(--width);
+    height: var(--line-height);
+    background-color: var(--color);
+}
+
+.btn--mobile::before,
+.btn--mobile::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    display: block;
+    width: var(--width);
+    height: var(--line-height);
+    background-color: var(--color);
+    transition: transform var(--time) ease-in, top var(--time) linear var(--time);
+}
+
+.btn--mobile::before {
+    top: calc(var(--line-height) * -2);
+}
+
+.btn--mobile::after {
+    top: calc(var(--line-height) * 2);
+}
+
+.btn--mobile.btn--mobile-active {
+    background-color: transparent;
+}
+
+.btn--mobile.btn--mobile-active::before,
+.btn--mobile.btn--mobile-active::after {
+    top: 0;
+    transition: transform var(--time) ease-in, top var(--time) linear var(--time);
+}
+
+.btn--mobile.btn--mobile-active::before {
+    transform: rotate(45deg);
+}
+
+.btn--mobile.btn--mobile-active::after {
+    transform: rotate(-45deg);
+}
